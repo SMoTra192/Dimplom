@@ -1,6 +1,6 @@
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
-public class Player : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [SerializeField] private FixedJoystick _joystick;
     [SerializeField] private Rigidbody _rigidbody;
