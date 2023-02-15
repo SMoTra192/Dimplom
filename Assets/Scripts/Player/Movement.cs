@@ -9,5 +9,6 @@ public class Movement : MonoBehaviour
     {
         _rigidbody.velocity = new Vector3(_joystick.Horizontal * playerSpeed, _rigidbody.velocity.y,
             _joystick.Vertical * playerSpeed);
+            
     }
 }
