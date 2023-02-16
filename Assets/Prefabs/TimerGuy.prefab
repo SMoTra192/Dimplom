@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 6110654806486847613}
   - component: {fileID: 5813027035116935358}
   - component: {fileID: 6062890589256287711}
+  - component: {fileID: 2558703016568697654}
   m_Layer: 0
   m_Name: TimerGuy
   m_TagString: Untagged
@@ -131,8 +132,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 20, z: 10}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!195 &6062890589256287711
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -155,6 +156,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2558703016568697654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677391880893436093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8667088001768154793c6b5e245bb6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766453196158858214
 GameObject:
   m_ObjectHideFlags: 0

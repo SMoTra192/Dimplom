@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
 {
+    [SerializeField] private PlayerHealth _playerHealth;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        _playerHealth.GetComponent<PlayerHealth>();
         
     }
 

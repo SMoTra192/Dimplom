@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6717596597014686107}
   - component: {fileID: 6438141832993136984}
   - component: {fileID: 6761992621938080825}
+  - component: {fileID: -5800552943050605169}
   m_Layer: 0
   m_Name: RedGuy
   m_TagString: Untagged
@@ -67,8 +68,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 20, z: 10}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!195 &6761992621938080825
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -91,6 +92,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-5800552943050605169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41182188198390107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8667088001768154793c6b5e245bb6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &240423293801368064
 GameObject:
   m_ObjectHideFlags: 0
