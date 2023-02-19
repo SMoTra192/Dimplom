@@ -6,6 +6,12 @@ TagManager:
   tags:
   - TImer
   - Points
+  - Molniya
+  - RedGuy
+  - Coin
+  - Lightning
+  - BlueGuy
+  - PurpleGuy
   layers:
   - Default
   - TransparentFX

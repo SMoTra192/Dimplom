@@ -4,27 +4,34 @@ using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int health,damage;
-    public UnityEvent died = new();
+    [SerializeField] private EnemyGiveDamage _enemyGiveDamage;
+    [SerializeField] private int health;
     public UnityEvent damaged = new();
 
-    
+    private void Awake()
+    {
+        _enemyGiveDamage.GetComponent<EnemyGiveDamage>();
+        _enemyGiveDamage.giveDamage.AddListener(() => TakeDamage(damage:1));
+        
+        
+    }
 
     private void Update()
     {
         if (health == 0 )
-            died.Invoke();
+            //died.Invoke();
+        print($"Now health is {health}");
+        GetHealth();
+        
     }
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        died.Invoke();
         health -= damage;
     }
-
     
-    private void OnTriggerEnter(Collider other)
+    public int GetHealth()
     {
-        TakeDamage(damage);
-        damaged.Invoke();
+        return health;
     }
+    
 }

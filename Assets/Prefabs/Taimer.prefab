@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5005250245076108930}
   - component: {fileID: 2638432048067986022}
   - component: {fileID: 6441594059918389959}
+  - component: {fileID: 384582675757548351}
   m_Layer: 0
   m_Name: Taimer
   m_TagString: TImer
@@ -67,6 +68,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &384582675757548351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005250245076108931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8667088001768154793c6b5e245bb6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6330464888559611367
 GameObject:
   m_ObjectHideFlags: 0

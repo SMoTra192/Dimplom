@@ -18,13 +18,7 @@ public class Spawner : MonoBehaviour
     {
         if (timeBtwSpawns <= 0)
         {
-            
-            for (var i = 0; i < 2; i++)
-            {
-                randPosition = Random.Range(0, spawnPoint.Length);
-                randEnemy = Random.Range(0, enemy.Length);
-                Instantiate(enemy[randEnemy], spawnPoint[randPosition].transform.position, Quaternion.identity);
-            }
+            Spawn();
             timeBtwSpawns = startTimeBtwSpawns;
         }
         else
@@ -32,5 +26,15 @@ public class Spawner : MonoBehaviour
             timeBtwSpawns -= Time.deltaTime;
         }
 
+    }
+
+    private void Spawn()
+    {
+        for (var i = 0; i < 2; i++)
+        {
+            randPosition = Random.Range(0, spawnPoint.Length);
+            randEnemy = Random.Range(0, enemy.Length);
+            Instantiate(enemy[randEnemy], spawnPoint[randPosition].transform.position, Quaternion.identity);
+        }
     }
 }

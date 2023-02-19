@@ -5,19 +5,13 @@ using UnityEngine;
 public class EntryPoint : MonoBehaviour
 {
     [SerializeField] private PlayerHealth _playerHealth;
-
-
-
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private EnemyGiveDamage _enemyGiveDamage;
+    void Awake()
     {
         _playerHealth.GetComponent<PlayerHealth>();
-        
+        _enemyGiveDamage.GetComponent<EnemyGiveDamage>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    
 }

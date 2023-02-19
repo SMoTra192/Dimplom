@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -5,16 +6,24 @@ public class Timer : MonoBehaviour
 {
     private float _timer;
     public float _timerduration = 3f * 60f;
-    //[SerializeField] private GameObject timePanel;
-    //[SerializeField] private GameObject TimerPanel;
     [SerializeField]private TextMeshProUGUI _firstminute;
     [SerializeField]private TextMeshProUGUI _secondminute;
     [SerializeField]private TextMeshProUGUI _separator;
     [SerializeField]private TextMeshProUGUI _fisrtsecond;
     [SerializeField]private TextMeshProUGUI _secondsecond;
+    [SerializeField] private GiveTime _giveTime;
+    private float takenTime;
+
+    private void Awake()
+    {
+        _giveTime.GetComponent<GiveTime>();
+        _giveTime.timePicked.AddListener(getTime);
+    }
+
     void Start()
     {
         ResetTimer();
+        takenTime = _giveTime.getTimeValue();
     }
     private void ResetTimer()
     {
@@ -40,5 +49,10 @@ public class Timer : MonoBehaviour
         _fisrtsecond.text = currenttime[2].ToString();
         _secondsecond.text = currenttime[3].ToString();
         
+    }
+
+    private void getTime()
+    {
+        _timer += takenTime;
     }
 }

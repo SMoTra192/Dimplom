@@ -1,18 +1,18 @@
 #nullable enable
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
 
+
 public class UIDamage : MonoBehaviour
 {
-    [SerializeField] private Image damagePanel;
-    [SerializeField] private PlayerHealth _playerHealth;
+    [SerializeField] private Image damagePanel = null!;
+    [SerializeField] private EnemyGiveDamage _enemyGiveDamage = null!;
     private void Awake()
     {
-        _playerHealth.GetComponent<PlayerHealth>().EnsureNotNull("There is no component");
-        _playerHealth.damaged.AddListener(() => StartCoroutine(DamagePanel()));
+        _enemyGiveDamage.EnsureNotNull().GetComponent<EnemyGiveDamage>();
+        _enemyGiveDamage.giveDamage.AddListener(() => StartCoroutine(DamagePanel()));
     }
 
     private IEnumerator DamagePanel()
@@ -21,4 +21,5 @@ public class UIDamage : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         damagePanel.gameObject.SetActive(false);
     }
+    
 }
