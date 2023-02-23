@@ -4,7 +4,7 @@ using UnityEngine;
 public class UICoin : MonoBehaviour
 {
     [SerializeField] private GiveCoin _giveCoin;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI[] text;
     private int coinValue;
 
     
@@ -24,6 +24,10 @@ public class UICoin : MonoBehaviour
 
     private void CoinToSee()
     {
-        text.text = $"{coinValue}"; 
+        foreach (var text in text)
+        {
+            text.text = $"{coinValue}";  
+        }
+        
     }
 }
