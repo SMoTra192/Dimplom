@@ -9,19 +9,24 @@ public class UIScorePanel : MonoBehaviour
     [SerializeField] private GiveScore _giveScore;
     [SerializeField] private GameObject ScorePanel,Player;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI[] text;
     private int score;
 
     private void Awake()
     {
         _giveScore.GetComponent<GiveScore>();
-        _giveScore.scored.AddListener(()=>score = _giveScore.GetScore());
+        //_giveScore.scored.AddListener(()=>);
         
     }
 
     private void Update()
     {
+        score = _giveScore.GetScore();
         ScorePanel.transform.position = Player.transform.position + offset;
-        text.text = $"{score}";
+        foreach (var text in text)
+        {
+            text.text = $"{score}";  
+        }
+        
     }
 }

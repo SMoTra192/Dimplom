@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class Timer : MonoBehaviour
     [SerializeField]private TextMeshProUGUI _secondsecond;
     [SerializeField] private GiveTime _giveTime;
     private float takenTime;
+    public UnityEvent timed = new();
+    [SerializeField] private float minTimeForFinalArea = 20f,maxTimeForFinalArea = 18f, timeForGameOver = 2f;
+    
+    
 
     private void Awake()
     {
@@ -37,6 +42,9 @@ public class Timer : MonoBehaviour
             _timer -= Time.deltaTime;
             UpdateDisplay(_timer);
         }
+        if (_timer < minTimeForFinalArea && _timer > maxTimeForFinalArea) timed.Invoke();
+        // ReSharper disable once CompareOfFloatsByEqualityOperator
+        if (_timer == timeForGameOver ) timed.Invoke();
     }
 
     private void UpdateDisplay(float time)
@@ -55,4 +63,15 @@ public class Timer : MonoBehaviour
     {
         _timer += takenTime;
     }
+
+    public float getTimeValue()
+    {
+        return _timer;
+    }
+
+    public float getTimeForGameOver()
+    {
+        return timeForGameOver;
+    }
+    
 }
