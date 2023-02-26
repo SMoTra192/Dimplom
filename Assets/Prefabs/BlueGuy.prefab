@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 6110654806486847613}
   - component: {fileID: 5813027035116935358}
   - component: {fileID: 6062890589256287711}
-  - component: {fileID: -6458988980687420587}
+  - component: {fileID: -7178602133638421337}
   m_Layer: 0
   m_Name: BlueGuy
   m_TagString: BlueGuy
@@ -156,7 +156,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-6458988980687420587
+--- !u!114 &-7178602133638421337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,9 +165,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 677391880893436093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8667088001768154793c6b5e245bb6b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 93ace5474c581da44b172082a458b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
+  audio: {fileID: 0}
+  objectToPoof: {fileID: 0}
+  parent: {fileID: 0}
 --- !u!1 &766453196158858214
 GameObject:
   m_ObjectHideFlags: 0

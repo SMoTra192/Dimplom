@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 1532539598009525581}
   - component: {fileID: 1125609741271923340}
   - component: {fileID: 3921040567712684174}
-  - component: {fileID: -7743530424378918133}
+  - component: {fileID: 8312630591802704847}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Lightning
@@ -4857,7 +4857,7 @@ Animator:
   m_GameObject: {fileID: 2890124149514255387}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2caf5587267a2b142bb462159d1550ce, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0d09dacf9e9b1b546a44e6df8ea66288, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4880,7 +4880,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7, y: 10, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7743530424378918133
+--- !u!114 &8312630591802704847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4889,7 +4889,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2890124149514255387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8667088001768154793c6b5e245bb6b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 93ace5474c581da44b172082a458b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6925215666439021360

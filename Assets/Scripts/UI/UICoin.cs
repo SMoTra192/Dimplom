@@ -3,8 +3,8 @@ using TMPro;
 using UnityEngine;
 public class UICoin : MonoBehaviour
 {
-    [SerializeField] private GiveCoin _giveCoin;
-    [SerializeField] private TextMeshProUGUI[] text;
+    [SerializeField] private GiveCoin _giveCoin = null!;
+    [SerializeField] private TextMeshProUGUI[] text = null!;
     private int coinValue;
 
     
@@ -12,14 +12,13 @@ public class UICoin : MonoBehaviour
     {
         coinValue = _giveCoin.getCoinValue();
         _giveCoin.GetComponent<GiveCoin>();
-        _giveCoin.CoinTaken.AddListener(()=>coinValue = _giveCoin.getCoinValue());
+        
     }
 
     private void Update()
     {
-        
+        coinValue = _giveCoin.getCoinValue();
         CoinToSee();
-        print($"{coinValue}");
     }
 
     private void CoinToSee()

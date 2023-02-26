@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5005250245076108930}
   - component: {fileID: 2638432048067986022}
   - component: {fileID: 6441594059918389959}
-  - component: {fileID: 384582675757548351}
+  - component: {fileID: 4302446549172082190}
   m_Layer: 0
   m_Name: Taimer
   m_TagString: TImer
@@ -58,7 +58,7 @@ Animator:
   m_GameObject: {fileID: 5005250245076108931}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2caf5587267a2b142bb462159d1550ce, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0d09dacf9e9b1b546a44e6df8ea66288, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -68,7 +68,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &384582675757548351
+--- !u!114 &4302446549172082190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5005250245076108931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8667088001768154793c6b5e245bb6b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 93ace5474c581da44b172082a458b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6330464888559611367

@@ -27,8 +27,9 @@ public class Movement : MonoBehaviour
         _giveBoost.TakenBoost.AddListener(() =>
             {
                 timeForBoostOut = constTimeForBoostOut;
-                if (isGetBoost!)
+                if (isGetBoost == false)
                 {
+                    print("boosted");
                     isBoosted = true;
                     getBoost();
                     isGetBoost = true;
